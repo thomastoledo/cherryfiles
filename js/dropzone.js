@@ -44,7 +44,7 @@ const DROPZONE_ERROR_MESSAGES = {
 
         this.eventManager = eventManager_;
         // init subscriptions
-        // this.initSubscriptions();
+        this.initSubscriptions();
 
         // MAX SIZE in Go
         this.MAX_SIZE = 2;
@@ -173,6 +173,7 @@ const DROPZONE_ERROR_MESSAGES = {
 
 class DropzoneDOMWrapper {
     constructor(dropzone_, eventManager_) {
+        alert('dropzonewrapper init')
         this.dropzone = dropzone_;
         this.eventManager = eventManager_;
 
@@ -218,6 +219,8 @@ class DropzoneDOMWrapper {
     }
 
     initDOM() {
+        alert('dropzonewrapper init DOM')
+
         this.dropzone.classList.add('dropzone');
         this.dropzoneContent = this.initDropzoneContent();
         this.dropzoneErrors = this.initDropzoneErrors();
@@ -228,6 +231,8 @@ class DropzoneDOMWrapper {
     }
 
     initDropzoneContent() {
+        alert('dropzonewrapper init dropzone content')
+
         const section = document.createElement('section');
         section.classList.add('dropzone__content');
         this.dropzoneMsg = this.initDropzoneMsg();
@@ -236,6 +241,8 @@ class DropzoneDOMWrapper {
     }
 
     initDropzoneMsg() {
+        alert('dropzonewrapper init message')
+
         const p = document.createElement('p');
         p.classList.add('dropzone__msg');
         p.innerText = `Déposez ici vos fichiers.\n2Go max.`;
@@ -243,12 +250,16 @@ class DropzoneDOMWrapper {
     }
 
     initDropzoneErrors() {
+        alert('dropzonewrapper init errors')
+
         const p = document.createElement('p');
         p.classList.add('dropzone__errors');
         return p;
     }
 
     initDropzoneMenu() {
+        alert('dropzonewrapper init menu')
+
         const section = document.createElement('section');
         section.classList.add('dropzone__menu');
         this.resetBtn = this.initResetBtn();
@@ -258,6 +269,8 @@ class DropzoneDOMWrapper {
     }
 
     initResetBtn() {
+        alert('dropzonewrapper init reset btn')
+
         const btn = document.createElement('button');
         btn.classList.add('dropzone__btn', 'dropzone__reset-btn');
         btn.innerText = 'Vider';
@@ -265,6 +278,8 @@ class DropzoneDOMWrapper {
     }
 
     initFileInput() {
+        alert('dropzonewrapper init fileinput')
+
         const label = document.createElement('label');
         const input = document.createElement('input');
         
@@ -320,6 +335,8 @@ class DropzoneDOMWrapper {
     }
 
     clearDOMFileList() {
+        alert('dropzonewrapper clear dom file list')
+
         if (!this.dropzoneContent.querySelector('.dropzone__file-list')) {
             return;
         }
@@ -327,6 +344,8 @@ class DropzoneDOMWrapper {
     }
 
     createDOMFileList(dropzoneFiles) {
+        alert('dropzonewrapper create dom file list')
+
         const ul = document.createElement('ul');
         ul.classList.add('dropzone__file-list');
 
@@ -338,6 +357,8 @@ class DropzoneDOMWrapper {
     }
 
     createDOMFileListItem(dropzoneFile) {
+        alert('dropzonewrapper create dom file list item')
+
         const type = dropzoneFile.file.type.split('/')[0];
         const cssClass = this.mimes[type] || this.mimes.other;
         const li = document.createElement('li');
@@ -355,12 +376,16 @@ class DropzoneDOMWrapper {
     }
 
     createDOMFileListItemTxt(txt) {
+        alert('dropzonewrapper create dom file list item txt')
+        
         const p = document.createElement('p');
         p.innerText = txt;
         return p;
     }
 
     createDOMFileListItemCloseIcon() {
+        alert('dropzonewrapper create dom file list item cross')
+
         const closeCross = document.createElement('i');
         closeCross.classList.add('material-icons', 'close-icon');
         closeCross.innerText = 'close';
