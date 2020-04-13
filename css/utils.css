@@ -26,13 +26,17 @@
     text-align: center;
 }
 
-.text-diff {
-    mix-blend-mode: difference;
-    color: var(--c-white);
+.text-dark-cherry {
+    color: var(--c-dark-cherry);
 }
 
-.text-cherry {
-    color: var(--c-cherry);
+.text-pale-dark-blue {
+    color: var(--c-pale-dark-blue);
+}
+
+.underline-double {
+    text-decoration: underline;
+    text-decoration-style: double;
 }
 
 /* SHADOWS */

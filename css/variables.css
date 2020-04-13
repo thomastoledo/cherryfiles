@@ -13,6 +13,8 @@
 
     /* COLORS */
     --c-cherry: #b40D50;
+    --c-dark-cherry: rgb(129,60,79);
+    --c-pale-dark-blue: rgb(19, 73, 109);
     --c-white: #FFFFFF;
     --c-black: #000000;
     --c-black-12: rgba(0,0,0,0.12);
