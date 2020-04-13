@@ -28,7 +28,7 @@ const DROPZONE_ERROR_NAMES = {
 
 const DROPZONE_ERROR_MESSAGES = {
     directory: `Les répertoires ne sont pas autorisés.`,
-    duplicates: `Nous n'autorisons pas l'envoi de fichiers ayant le même nom. Veuilez renommer le(s) fichier(s) concerné(s) puis réessayer.`,
+    duplicates: `Nous n'autorisons pas l'envoi de fichiers ayant le même nom. Veuillez renommer le(s) fichier(s) concerné(s) puis réessayer.`,
     size: `Nous n'autorisons pas les envois de plus de 2Go.`
 }
 
@@ -44,7 +44,7 @@ const DROPZONE_ERROR_MESSAGES = {
 
         this.eventManager = eventManager_;
         // init subscriptions
-        this.initSubscriptions();
+        // this.initSubscriptions();
 
         // MAX SIZE in Go
         this.MAX_SIZE = 2;
