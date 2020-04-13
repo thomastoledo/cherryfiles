@@ -1,0 +1,53 @@
+:root {
+    --base-scale-px: 8px;
+
+    /* GAPS */
+    --gap-min: calc(var(--base-scale-px) / 2);
+    --gap-base: var(--base-scale-px);
+    --gap-2x: calc(var(--gap-base) * 2);
+    --gap-3x: calc(var(--gap-base) * 3);
+    --gap-4x: calc(var(--gap-base) * 4);
+    
+    /* MIN WIDTH */
+    --min-width: 0px;
+
+    /* COLORS */
+    --c-cherry: #b40D50;
+    --c-white: #FFFFFF;
+    --c-black: #000000;
+    --c-black-12: rgba(0,0,0,0.12);
+    --c-black-24: rgba(0,0,0,0.24);
+    --c-black-30: rgba(0,0,0,0.3);
+    --c-black-60: rgba(0,0,0,0.6);
+    --c-light-grey: rgb(241, 241, 241);
+    --c-grey: #C3C3C3;
+    --c-calm-blue: #7EC3B0;
+    --c-calm-orange: #E8A87C;
+    --c-red-error: #c70000;
+
+    --c-light-blue: #3f8fc9;
+    --c-dark-blue: #1f5a83;
+
+    --c-img-type-color: #ff4e85;
+    --c-video-type-color: #ff004e;
+    --c-audio-type-color: #e26a07;
+    --c-app-type-color: #37a6e7;
+    --c-txt-type-color: #ffcc80;
+    --c-other-type-color: #eeeeee;
+
+    /* BOX SHADOW */
+    --shadow-thin-material: 0 1px 3px var(--c-black-12), 0 1px 2px var(--c-black-24);
+
+    /* COMPONENTS VARIABLES */
+    /* Form controls */
+    --h-controls: calc(var(--base-scale-px) * 5);
+
+    /* Cards */
+    --card-background-color: var(--c-white);
+    --card-border-radius: 4px;
+    --card-padding: var(--gap-base);
+    --card-box-shadow: var(--shadow-thin-material);
+    --card-margin: var(--gap-base) var(--gap-2x);
+
+    --card-content-min-width: calc(var(--min-width) - (var(--card-padding) * 2) - var(--gap-base));
+}

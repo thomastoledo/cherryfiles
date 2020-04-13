@@ -1,0 +1,132 @@
+@import "variables.css";
+
+/* BACKGROUNDS */
+.bg-cherry {
+    background-color: var(--c-cherry);
+}
+
+.bg-white {
+    background-color: var(--c-white);
+}
+
+.split-bg {
+    background: linear-gradient(105deg, var(--c-calm-blue) 50%, var(--c-calm-orange) 50%);
+}
+
+.bg-fixed {
+    background-attachment: fixed;
+}
+
+/* TEXT */
+.text-white {
+    color: var(--c-white);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-diff {
+    mix-blend-mode: difference;
+    color: var(--c-white);
+}
+
+.text-cherry {
+    color: var(--c-cherry);
+}
+
+/* SHADOWS */
+.shadow {
+    box-shadow: var(--shadow-thin-material);
+}
+
+/* WIDTHS */
+.w-full {
+    width: 100%;
+}
+
+/* HEIGHTS */
+.height-full-screen {
+    min-height: 100vh;
+}
+
+.height-full {
+    height: 100%;
+}
+
+/* FLEXBOX */
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
+.grow-1 {
+    flex-grow: 1;
+}
+
+.shrink-2 {
+    flex-shrink: 2;
+}
+
+/* MARGINS */
+.m-t-3x {
+    margin-top: var(--gap-3x);
+}
+
+.m-l {
+    margin-left: var(--gap-base);
+}
+
+.m-x-2x {
+    margin-left: var(--gap-2x);
+    margin-right: var(--gap-2x);
+}
+
+/* PADDINGS */
+.p-l-0 {
+    padding-left: 0;
+}
+
+.p-t-2 {
+    padding-top: var(--gap-2x)
+}
+
+/* POSITIONS */
+.pos-absolute {
+    position: absolute;
+}
+
+/* GRIDS */
+.grid {
+    display: grid;
+}
+
+/* DISABLED */
+.disabled {
+    background-color: var(--c-grey);
+    color: var(--c-black-60);
+    cursor: default;
+}

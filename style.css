@@ -1,0 +1,37 @@
+@import "utils.css";
+@import "components.css";
+@import "dropzone.css";
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+figure {
+    margin: 0;
+}
+
+.logo__img {
+    width: 85px;
+}
+
+.logo__title {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    text-decoration: underline;
+    text-decoration-style: double;
+
+    display: none;
+}
+
+@media (min-width: 300px) {
+    .logo__title {
+        display: block;
+    }
+}

@@ -1,0 +1,90 @@
+@import "variables.css";
+
+*:disabled {
+    cursor: default;
+}
+
+/* FORM CONTROLS */
+input, button {
+    height: var(--h-controls);
+}
+
+input {
+    border: none;
+    background-color: var(--c-white);
+    font-size: 1rem;
+    padding-bottom: 0px;
+}
+
+button, input[type="submit"], input[type="button"] {
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 1px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input:not([type="submit"]):not([type="button"]) {
+    border-bottom: 1px solid var(--c-black-60);
+    padding: 0 var(--gap-base);
+}
+
+input:not([type="submit"]):not([type="button"]).invalid {
+    border-radius: 4px;
+    border: 1px solid var(--c-red-error);
+    box-shadow: 0 0 8px var(--c-red-error);
+}
+
+input:not([type="submit"]):not([type="button"]).invalid:focus {
+    outline-color: var(--c-red-error);
+}
+
+
+
+/* FLEX FORMS */
+.flex-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 520px;
+    justify-content: center;
+    margin: auto;
+}
+
+.flex-form input {
+    width: 100%;
+}
+
+.flex-form__control, .flex-form__control--bigger {
+    margin: var(--gap-3x) 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-form__btn {
+    margin-top: var(--gap-3x);
+    flex: 0 1 30ch;
+}
+
+.flex-form__control {
+    flex: 1 1 30ch;
+}
+  
+.flex-form__control--bigger{
+    flex: 3 1 40ch;
+}
+
+/* CARD */
+.card {
+    background-color: var(--card-background-color);       
+    border-radius: var(--card-border-radius);                     
+    padding: var(--gap-base);               
+    box-shadow: var(--shadow-thin-material);
+    margin: var(--card-margin);  
+}
+
+.card__content {
+    min-width: var(--card-content-min-width);
+}

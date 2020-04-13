@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Upload Files</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Modules are automatically defered -->
+        <script src="./app.js" type="module"></script>
+    </head>
+    <body>
+        <section class="split-bg bg-fixed">
+
+            <section id="sender-section" class="flex flex-column align-center justify-center height-full-screen">
+                <header class="flex wrap w-full justify-center p-t-2">
+                    <figure>
+                        <img class="logo__img" src="./assets/fruit.svg" alt="logo">
+                    </figure>
+                    <p class="logo__title text-diff m-l">.CherryFiles</p>
+                </header>
+
+                <div class="flex wrap w-full justify-center">
+
+                    <section id="dropzone" class="card grow-1">
+                    </section>
+    
+                    <section class="flex align-center card">
+                        <form class="card__content flex-form height-full" onsubmit="event.preventDefault()">
+                            <label class="flex-form__control--bigger">
+                                Votre email
+                                <input id="senderEmail" type="email" placeholder="john.doe@mail.com">
+                            </label>
+                            <label class="flex-form__control--bigger">
+                                Emails destinataires (séparés par des points-virgules)
+                                <input id="recipientEmails" type="text" placeholder="john.doe@mail.com">
+                            </label>
+                            <input id="validateBtn" class="flex-form__btn bg-cherry shadow text-white disabled" disabled type="submit" value="Valider">
+                        </form>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>
