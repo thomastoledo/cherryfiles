@@ -122,6 +122,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: var(--h-controls);
 }
 
 .dropzone__btn:hover {
@@ -131,7 +132,6 @@
 .dropzone__btn--upload {
     background-color: var(--c-light-blue);
     color: var(--c-white);
-    height: var(--h-controls);
 }
 
 .dropzone__btn--upload > input[type="file"] {

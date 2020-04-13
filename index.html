@@ -19,17 +19,17 @@
                     <p class="logo__title m-l"><span class="text-dark-cherry underline-double">.Cherry</span><span class="text-pale-dark-blue underline-double">Files</span></p>
                 </header>
 
-                <div class="flex wrap w-full justify-center">
+                <div class="w-full" style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px; justify-items: center;">
 
-                    <section id="dropzone" class="card grow-1">
+                    <section id="dropzone" class="card grow-1" style="max-width: 520px; width: 100%">
                     </section>
     
-                    <section class="flex align-center card">
+                    <section class="flex align-center card" style="max-width: 520px;">
                         <form class="card__content flex-form height-full" onsubmit="event.preventDefault()">
                             <label class="flex-form__control--bigger">
                                 Votre email
                                 <input id="senderEmail" type="email" placeholder="john.doe@mail.com">
-                            </label>
+                            </label>    
                             <label class="flex-form__control--bigger">
                                 Emails destinataires (séparés par des points-virgules)
                                 <input id="recipientEmails" type="text" placeholder="john.doe@mail.com">

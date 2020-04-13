@@ -16,7 +16,7 @@ input {
     padding-bottom: 0px;
 }
 
-button, input[type="submit"], input[type="button"] {
+button, input:is([type="submit"]):is([type="button"]) {
     border: none;
     cursor: pointer;
     border-radius: 4px;
