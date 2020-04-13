@@ -2,6 +2,7 @@ import { DropzoneManager, OUTPUT_TOPICS } from './dropzone.js';
 import { EventManager } from './events.js';
 
 const eventManager = new EventManager();
+alert('test')
 const dropzoneManager = new DropzoneManager(document.getElementById('dropzone'), eventManager);
 
 const validateBtn = document.getElementById('validateBtn');
