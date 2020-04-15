@@ -281,10 +281,15 @@ class DropzoneDOMWrapper {
     }
 
     setFileListItemErrorClass(elementId, isError) {
+        const element = document.getElementById(elementId);
+        if (!element) {
+            return;
+        }
+
         if (isError) {
-            document.getElementById(elementId)?.classList.add('dropzone-file--error');
+            document.getElementById(elementId).classList.add('dropzone-file--error');
         } else {
-            document.getElementById(elementId)?.classList.remove('dropzone-file--error');
+            document.getElementById(elementId).classList.remove('dropzone-file--error');
         }
     }
 
@@ -296,7 +301,10 @@ class DropzoneDOMWrapper {
     }
 
     removeFileListItem(elementId) {
-        document.getElementById(elementId)?.remove();
+        const element = document.getElementById(elementId);
+        if(element) {
+            document.getElementById(elementId).remove()
+        };
     }
 
     refreshDropzoneContent(dropzoneFiles) {

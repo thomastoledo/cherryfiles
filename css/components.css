@@ -81,7 +81,7 @@ input:not([type="submit"]):not([type="button"]).invalid:focus {
     border-radius: var(--card-border-radius);                     
     padding: var(--gap-base);               
     box-shadow: var(--shadow-thin-material);
-    margin: var(--card-margin);  
+    margin: var(--card-margin);
 }
 
 .card__content {
