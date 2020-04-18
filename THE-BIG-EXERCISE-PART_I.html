@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE BIG EXERCISE - PART I</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#the-big-exercise---part-i">THE BIG EXERCISE - PART I</a>
+<ul>
+<li><a href="#sujet-de-lexercice">Sujet de l’exercice</a></li>
+<li><a href="#première-itération--full-native">Première itération : full-native</a></li>
+<li><a href="#fin-de-la-première-partie">Fin de la première partie</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="the-big-exercise---part-i">THE BIG EXERCISE - PART I</h1>
+<p>Cette fois ça y est : malgré la pandémie, malgré les cours à distance, vous tenez bon et continuez à travailler d’arrache-pied pour valider votre année et poursuivre votre formation. Durant ce semestre, vous avez commencé les cours d’intégration.</p>
+<p>Ô rage, ô désespoir : je ne suis pas l’intervenant en charge de vous inculquer le savoir de cette discipline, certes difficile de prime abord, mais ô combien demandée par les entreprises.</p>
+<p>Qu’à cela ne tienne ! Voici un exercice, <strong>non-noté</strong>, qui vous permettra de pratiquer :</p>
+<ul>
+<li>
+<p>la sémantique [ HAHAHA ] &gt; (👁️ᗜ👁️);</p>
+</li>
+<li>
+<p>le CSS ;</p>
+</li>
+<li>
+<p>le JavaScript   ¯\<em>(´◞ `)</em>/¯ ;</p>
+</li>
+<li>
+<p>la notion de composants ;</p>
+</li>
+<li>
+<p>les frameworks JS et CSS ;</p>
+</li>
+<li>
+<p>la production d’un livrable.</p>
+<p>Cet exercice s’adresse à tous ceux et toutes celles qui souhaiteraient améliorer leurs compétences, principalement en JavaScript, mais également en HTML et CSS.</p>
+</li>
+</ul>
+<h2 id="sujet-de-lexercice">Sujet de l’exercice</h2>
+<p>Le sujet est relativement simple : nous allons faire un site permettant aux utilisateurs de transférer des fichiers comme le permet WeTransfer.</p>
+<p>Nous le ferons en plusieurs parties / itérations. Le site n’est pas une fin en soi : le réel but est de plonger les mains dans le cambouis, et d’apprendre à chaque obstacle qui se présente.</p>
+<p>Pour chaque consigne, je vous donnerai des liens et des indications pour vous aider et, pour le reste, ce sera à vous de chercher !</p>
+<p>Il s’agira d’un site <em>one page</em> présentant un formulaire pour renseigner son adresse mail ainsi que les adresses des destinataires, et un module pour le chargement des fichiers.<br>
+Comme il s’agit d’un exercice pour s’entraîner, le site résultat est disponible ici : <strong><a href="https://nugetchar.github.io/cherryfiles/">CherryFiles</a></strong>.</p>
+<p>Essayez cependant de vous en aider le moins possible.</p>
+<p>Assez parlé, place à la pratique !</p>
+<h2 id="première-itération--full-native">Première itération : full-native</h2>
+<p>Pour la première version de notre application, nous allons commencer par du <em>full-native</em>, c’est-à-dire tout en pur HTML, CSS et JavaScript.</p>
+<h3 id="première-étape---html--css">Première étape - HTML &amp; CSS</h3>
+<p>Pour commencer, nous allons nous occuper de faire l’intégration CSS du site.</p>
+<h4 id="le-background">Le background</h4>
+<p>Le fond du site peut se faire en utilisant la propriété CSS <a href="https://developer.mozilla.org/fr/docs/Web/CSS/linear-gradient"><strong>(∩◉‿◉)⊃━☆ﾟ linear-gradient</strong></a>. Les couleurs sont les suivantes :</p>
+<ul>
+<li>bleu : <code>#7EC3B0</code> ;</li>
+<li>orange : <code>#E8A87C</code>.</li>
+</ul>
+<h4 id="le-logo">Le logo</h4>
+<p>L’image est disponible ici : <a href="https://drive.google.com/file/d/1u0kMouMQ_Ge7v22x0D0Q-7h6OndT5SFA/view?usp=sharing">logo</a> .<br>
+Les couleurs du texte sont respectivement <code>rgb(129,60,79)</code>pour “.Cherry” et <code>rgb(19, 73, 109)</code> pour “Files”.</p>
+<p>En deçà de <code>300px</code> de largeur, seule l’image doit être affichée.</p>
+<h4 id="dropzone-et-formulaire-de-mails">Dropzone et formulaire de mails</h4>
+<p>La deuxième partie de la page doit être <em>responsive</em> : lorsque l’on redimensionne la fenêtre, les deux blocs doivent passer à un alignement vertical.</p>
+<p>Chaque block a les propriétés suivantes :</p>
+<ul>
+<li>la couleur de fond est <code>#ffffff</code> ;</li>
+<li>l’arrondi des angles (<code>border-radius</code>) est de <code>4px</code> ;</li>
+<li>il y a une légère ombre (<a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow"><strong>(∩◉‿◉)⊃━☆ﾟ box-shadow</strong></a>) ;</li>
+</ul>
+<h5 id="boutons">Boutons</h5>
+<p>Les spécifications des boutons sont les suivantes :</p>
+<ul>
+<li>chaque bouton a un <code>border-radius</code> de <code>4px</code> ;</li>
+<li>la hauteur des boutons est de <code>38px</code> ;</li>
+<li>bouton “Vider” : couleur noire, opacité 30% (utilisez la fonctione CSS <code>rgba</code> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><strong>(∩◉‿◉)⊃━☆ﾟ documentation MDN</strong></a>) ;</li>
+<li>bouton “Vider” sur l’évènement <strong>hover</strong> : couleur noire, opacité 60% ;</li>
+<li>bouton “Ajouter des fichiers” : couleur <code>#3f8fc9</code> et texte de couleur blanche ;</li>
+<li>bouton “Ajouter des fichiers” sur l’évènement <strong>hover</strong> : couleur <code>#1f5a83</code> ;</li>
+<li>bouton “Valider” lorsqu’il est désactivé : couleur <code>#C3C3C3</code> et texte de couleur noire opacité 60% ;</li>
+<li>bouton “Valider” lorsqu’il n’est plus désactivé : couleur <code>#b40D50</code> et texte de couleur blanche.</li>
+</ul>
+<p><strong>ᕕ(ꔸ!ꔸ)ᕗ Quelques points de précision :</strong></p>
+<ul>
+<li>il est essentiel d’utiliser l’attribut <code>disabled</code> sur un bouton lorsque l’on veut le désactiver de manière effective ;</li>
+<li>le bouton “Ajouter des fichiers” est un input de type <code>file</code> : les boutons de ce type ont ceci de particulier qu’ils sont <strong>pénibles à styliser</strong>.</li>
+</ul>
+<p><strong>(∩◉‿◉)⊃━☆ﾟ</strong>.* Lisez-bien <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"><strong>la documentation</strong></a> au sujet de cet input très particulier.</p>
+<h4 id="les-fichiers-chargés">Les fichiers chargés</h4>
+<p>La disposition des fichiers dans la <em>dropzone</em> doit se configurer avec du FlexBox. Je vous laisse chercher, ne me remerciez pas ¯\<em>(♥v♥)</em>/¯.</p>
+<h3 id="deuxième-étape---le-javascript-👁️ᗜ👁️">Deuxième étape - Le JavaScript (👁️ᗜ👁️)</h3>
+<p>Waouh.<br>
+C’est à partir de ce moment précis que le mot “souffrance” va prendre tout son sens.</p>
+<p>Vous venez donc de faire un design qui correspond à ce qui est demandé, ou du moins qui vous convient si vous avez décidé d’y ajouter votre petite toucher personnelle. Voilà donc venu le moment d’ajouter un brin d’interactivité à votre site, sapristi !</p>
+<h4 id="besoins-fonctionnels">Besoins fonctionnels</h4>
+<p>Avant de foncer tête baissée dans le code, il convient de se poser OKLMZER la famille et de réfléchir un peu, le sang t’as capté.<br>
+Pour commencer, la partie qui va vous demander un peu de réflexion est ce que j’appelle gracieusement <em>la dropzone</em>. Cet élément doit permettre les fonctionnalités suivantes :</p>
+<ul>
+<li>charger un fichier en cliquant sur le bouton “Ajouter des fichiers” ;</li>
+<li>le <em>drag’n’drop</em> de fichiers ;</li>
+<li>vider la liste des fichiers lorsque l’on clique sur le bouton “Vider” ;</li>
+<li>afficher un message d’erreur lorsque l’on <em>drop</em> un répertoire dedans ;</li>
+<li>afficher un message d’erreur lorsque l’utilisateur / l’utilisatrice essaye de charger deux fichiers ayant le même nom ;</li>
+<li>entourer en rouge le ou les répertoires que l’on a essayé de charger ;</li>
+<li>si la personne essaye de charger un fichier qui porte le même nom qu’un fichier déjà chargé, il faut entourer en rouge le nouveau fichier ;</li>
+<li>on doit pouvoir supprimer individuellement chaque fichier de la liste ;</li>
+<li>le nom des fichiers chargés doit être affiché ;</li>
+<li>le nom des fichiers chargés doit être tronqué si jamais l’utilisateur ou l’utilisatrice redimensionne sa fenêtre ou si la largeur de l’écran de base est trop petite ;</li>
+<li>le message initial doit disparaître dès qu’un fichier est chargé ;</li>
+<li>on ne doit pas pouvoir charger plus de 2Go de fichiers (ou alors une erreur s’affiche).</li>
+</ul>
+<p>Ensuite, il y a le formulaire :</p>
+<ul>
+<li>on ne doit pouvoir taper QUE des adresses courriels ;</li>
+<li>on doit pouvoir en écrire plusieurs, séparées par des points-virgules, dans la partie des destinataires ;</li>
+<li>lorsqu’une adresse courriel n’a pas un format valide, il faut entourer le champ texte en rouge ;</li>
+<li>dès que le format de l’adresse est bon, le champ n’est plus entouré en rouge ;</li>
+<li>et SURTOUT (là vous allez vraiment me haïr) : il faut que le bouton “Valider” ne soit plus grisé ni désactivé <strong>uniquement</strong> lorsqu’il y a <strong>au moins un fichier</strong> de chargé, qu’il y a un expéditeur de renseigné, qu’il y a au moins un destinataire, et que <strong>toutes les adresses courriels</strong> sont valides ;</li>
+<li>dès que l’une des conditions n’est plus respectée, il faut que le bouton redevienne grisé et désactivé.</li>
+</ul>
+<h4 id="les-modules">Les modules</h4>
+<p>Nous allons travailler avec <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Modules"><strong>(∩◉‿◉)⊃━☆ﾟ.* les modules en JavaScript</strong></a>.<br>
+Les modules ont plusieurs particularités :</p>
+<ul>
+<li>on peut y importer ou bien en exporter des objets / fonctions / classes ;</li>
+<li>pour importer un module dans un fichier HTML, il faut impérativement rajouter l’attribut <code>type="module"</code> à la balise <code>&lt;script&gt;&lt;/script&gt;</code> ;</li>
+<li>les modules sont automatiquement <em>defered</em>.</li>
+</ul>
+<p>Voici un exemple de module possible :</p>
+<p><em>Fichier example.js</em></p>
+<pre class=" language-js"><code class="prism  language-js"><span class="token comment">// ici, je définis une fonction appendChildToParent</span>
+<span class="token comment">// et je précise, avec le mot-clé "export", qu'elle peut</span>
+<span class="token comment">// être importée par d'autres fichiers</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">appendChildToParent</span><span class="token punctuation">(</span>parent<span class="token punctuation">,</span> child<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	parent<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><em>Fichier app.js</em></p>
+<pre class=" language-js"><code class="prism  language-js"><span class="token comment">// Je peux importer la fonction appendChildToParent</span>
+<span class="token comment">// car je l'ai définie, dans le fichier précédent, comme étant exportée</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> appendChildToParent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./example.js'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Je peux ensuite l'appeler comme bon me semble dans mon fichier app.js</span>
+<span class="token keyword">const</span> section <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'section'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">appendChildToParent</span><span class="token punctuation">(</span>section<span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>L’avantage des modules est de pouvoir isoler son code par fonctionnalités pour le rendre plus propre, plus lisible et plus maintenable.</p>
+<p><strong>(ᵔ෴ᵔ) Instructions :</strong>  dans le répertoire de votre projet, créez un fichier nommé <code>app.js</code>. Puis, dans votre <code>index.html</code>, importez-le comme suit : <code>&lt;script src="./app.js" type="module"&gt;&lt;/script&gt;</code>*.</p>
+<p>Vous venez de créer votre premier module JavaScript. Félicitations.<br>
+<img src="https://media.giphy.com/media/qjfeT5XdAirCg/giphy.gif" alt="enter image description here"></p>
+<h4 id="le-formulaire">Le formulaire</h4>
+<p>Commençons par notre formulaire de mails.</p>
+<h5 id="on-ne-doit-pouvoir-taper-que-des-adresses-mails"><em>On ne doit pouvoir taper que des adresses mails</em></h5>
+<p>Il faut que, lorsque l’utilisateur ou l’utilisatrice tape quelque chose dans le champ, nous vérifiions que l’e-mail a un format correct.</p>
+<p>Aidez-vous de l’événement <a href="https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/input_event">input</a> ainsi que de la fonction <a href="https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener">addEventListener</a>.<br>
+Utilisez également les <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp">RegExp</a> (l’enfer des devs) pour vérifier le format des emails (je vous la donne parce qu’elle est pénible : <code>/^(([^&lt;&gt;()[\]\\.,;:\s@\"]+(\.[^&lt;&gt;()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</code>).</p>
+<h5 id="on-doit-pouvoir-en-écrire-plusieurs-séparées-par-des-points-virgules-dans-la-partie-des-destinataires"><em>On doit pouvoir en écrire plusieurs, séparées par des points-virgules, dans la partie des destinataires</em></h5>
+<p>Enfin, comme pour les destinataires on peut écrire plusieurs adresses mails séparées par des points-virgules, vous pouvez vous aider de la fonction <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/split">split</a>.</p>
+<h5 id="en-cas-derreur-de-format-il-faut-entourer-le-champ-texte-en-rouge"><em>En cas d’erreur de format, il faut entourer le champ texte en rouge</em></h5>
+<p>Si le format est incorrect, alors :</p>
+<ul>
+<li>on entoure de rouge l’input (<a href="https://developer.mozilla.org/fr/docs/Web/CSS/border">border</a> et <a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow">box-shadow</a>) ;</li>
+</ul>
+<h5 id="en-cas-derreur-le-bouton-valider-est-grisé-et-désactivé"><em>En cas d’erreur, le bouton “Valider” est grisé et désactivé</em></h5>
+<p>On rend le bouton “Valider” grisé, et on le désactive (<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/button#Validation">Désactiver un bouton</a>).</p>
+<h5 id="dès-que-les-champs-sont-valides..."><em>Dès que les champs sont valides…</em></h5>
+<p>… le bouton “Valider” n’est plus grisé et est de nouveau activé. Les champs ne sont plus entourés en rouge.</p>
+<h4 id="la-dropzone-👁️ᗜ👁️">La dropzone (👁️ᗜ👁️)</h4>
+<p>Déjà :<br>
+<img src="https://media.giphy.com/media/6jfwcplBfaKas/giphy.gif" alt="enter image description here"></p>
+<h5 id="charger-un-fichier-en-cliquant-sur-le-bouton-ajouter-des-fichiers"><em>Charger un fichier en cliquant sur le bouton “Ajouter des fichiers”</em></h5>
+<p>Il va bien falloir stocker ces fichiers quelque part en attendant de pouvoir valider l’envoi. Vous aurez donc besoin d’un <a href="https://developer.mozilla.org/fr/docs/Glossaire/array">tableau</a> ainsi que d’en savoir un peu plus sur la structure <a href="https://developer.mozilla.org/fr/docs/Web/API/File">File</a>.<br>
+Egalement, il faudra utiliser l’événement <code>change</code> comme décrit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file">dans la doc</a> et la fonction <a href="https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener">addEventListener</a>.</p>
+<p>Aussi, dès qu’un ou plusieurs nouveaux fichiers sont chargés, il faudra les afficher dans la <em>dropzone</em>.</p>
+<h5 id="vider-la-liste-des-fichiers-lorsque-lon-clique-sur-le-bouton-vider"><em>Vider la liste des fichiers lorsque l’on clique sur le bouton “Vider”</em></h5>
+<p>Utilisez les gestionnaires d’événement (<em>addEventListener</em>) comme précédemment, et l’événement <a href="https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/click">click</a>, pour vider la liste.</p>
+<h5 id="afficher-un-message-derreur-lorsque-la-personne-charge-un-ou-des-fichiers-portant-le-même-nom-que-des-fichiers-déjà-chargés"><em>Afficher un message d’erreur lorsque la personne charge un ou des fichiers portant le même nom que des fichiers déjà chargés</em></h5>
+<p>Pareil : il va falloir utiliser les gestionnaires d’événement, vérifier si des fichiers portant le même nom existent dans la liste de fichiers, et afficher un message d’erreur le cas échéant.</p>
+<h5 id="entourer-en-rouge-les-fichiers-nouvellement-chargés-qui-sont-des-doublons"><em>Entourer en rouge les fichiers nouvellement chargés qui sont des doublons</em></h5>
+<p>Si parmi les fichiers nouvellement chargés, certains sont des doublons, il va falloir les entourer en rouge pour les indiquer à l’utilisateur ou à l’utilisatrice. Du coup : gestionnaire d’événement =&gt; on vérifie les doublons et on les entoure en rouge.</p>
+<p><strong>ᕕ(ꔸ!ꔸ)ᕗ Attention</strong> : si vous faites le test sur <a href="https://nugetchar.github.io/cherryfiles/">https://nugetchar.github.io/cherryfiles/</a>, vous verrez que pour <em>n</em> fichiers portant le même nom, seuls les <em>n-1</em> fichiers sont entourés en rouge, le premier n’était pas modifié.<br>
+<img src="https://media.giphy.com/media/872o15eAXFBw66UfNl/giphy.gif" alt="enter image description here"></p>
+<h5 id="on-doit-pouvoir-supprimer-individuellement-chaque-fichier-de-la-liste"><em>On doit pouvoir supprimer individuellement chaque fichier de la liste</em></h5>
+<p>Cela signifie que quand vous allez créer vos petits blocs dans le DOM, vous allez rajouter à chaque fois, sur leur petite croix, un gestionnaire d’événements qui devra appeler une fonction chargée de supprimer de votre tableau de fichiers le fichier concerné, et également le supprimer du DOM.</p>
+<p>Par ailleurs, pour faire mes petites croix, je me suis aidé de <a href="https://material.io/resources/icons/">Material Icons</a>.</p>
+<h5 id="le-nom-des-fichiers-affichés-doit-être-tronqué-si-la-fenêtre-est-trop-petite"><em>Le nom des fichiers affichés doit être tronqué si la fenêtre est trop petite</em></h5>
+<p>Cherchez sur Google <strong>HTML / CSS ellipsis</strong>.</p>
+<h5 id="le-message-initial-doit-disparaître-dès-quun-fichier-est-chargé"><em>Le message initial doit disparaître dès qu’un fichier est chargé</em></h5>
+<p>Gestionnaire d’événements + CSS, que voulez-vous ?</p>
+<h5 id="pas-plus-de-2go-"><em>Pas plus de 2Go !</em>*</h5>
+<p>On n’est pas des sauvages, on n’envoie pas plus de 2Go à chaque fois. Du coup, dès qu’un nouveau chargement est effectué, il faut effectuer un traitement qui calcule la taille totale de tous les fichiers, et qui affiche ou non un message d’erreur.</p>
+<p><strong>ᕕ(ꔸ!ꔸ)ᕗ Attention</strong> : cela doit également se faire lorsque l’on supprime un item de la liste.<br>
+<strong>ᕕ(ꔸ!ꔸ)ᕗ Attention</strong> : pour convertir des <em>bytes</em> en <em>giga bytes</em>, il faut faire <code>bytes / Math.pow(1024, 3)</code> où <em>bytes</em> est le nombre de <em>bytes</em>.</p>
+<h5 id="le-dragndrop">Le drag’n’drop</h5>
+<p><img src="https://media.giphy.com/media/EtB1yylKGGAUg/giphy.gif" alt="enter image description here"><br>
+<em>Big time</em>.<br>
+Je vous laisse le plaisir de lire <a href="https://developer.mozilla.org/fr/docs/Web/API/API_HTML_Drag_and_Drop">la documentation sur l’API HTML Drag and Drop</a>. Attention, c’est <strong>long</strong>. À la fois à lire et à la fois à faire.</p>
+<h5 id="no-directory"><em>No directory!</em></h5>
+<p>Une fois que vous avez réussi à faire un drag’n’drop qui vous convient, vous devez normalement remarquer que vous pouvez utiliser cette fonctionnalité pour mettre des répertoires. Or, on ne veut que des fichiers.<br>
+Du coup, dès que l’utilisateur ou l’utilisatrice met un dossier, il faut afficher un message d’erreur et entourer en rouge le dossier dans la liste.<br>
+Pour cela, utiliser les événements disponibles dans l’API dont je vous ai mis la documentation juste avant.</p>
+<h5 id="les-différentes-couleurs"><em>Les différentes couleurs</em></h5>
+<p>Vous avez dû remarquer que selon le type de fichier chargé, il n’y avait pas la même couleur. Pour cela, j’ai décidé d’utiliser le <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types"><em>MIME Type</em></a>. Il s’agit du type du fichier. En me basant dessus, j’ai regardé selon que le fichier était du texte, une image, une vidéo, de l’audio, une application ou autre, et j’ai appliqué une classe CSS particulière à mon élément en fonction de cela.</p>
+<h2 id="fin-de-la-première-partie">Fin de la première partie</h2>
+<p>Dans la deuxième partie, nous seront toujours dans la première itération (<em>full native</em>). Néanmoins, nous verrons comme arranger de manière un peu plus propre et réutilisable notre code.</p>
+<p>Et croyez-moi : ça va piquer.<br>
+<img src="https://media.giphy.com/media/UO5elnTqo4vSg/giphy.gif" alt="enter image description here"></p>
+
+    </div>
+  </div>
+</body>
+
+</html>
