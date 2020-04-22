@@ -28,7 +28,7 @@ const TOPICS = {
  */
 const updateAppStateFormValid = () => {
     const validSender = validateEmail(senderEmail.value);
-    const validRecipients = validateRecipientEmails(recipientEmails.value, ';');
+    const validRecipients = validateEmails(recipientEmails.value, ';');
     appState.formValid = validSender && validRecipients;
     eventManager.emit(TOPICS.switchDisabled, appState);
 }
@@ -43,12 +43,13 @@ const validateEmail = (email) => {
 }
 
 /**
- * @brief validate all recipients emails
+ * @brief validate a list of emails
  * @param {string} value (string of emails)
  * @param {string} separator (default value is ;)
  */
-const validateRecipientEmails = (value, separator = ';') => {
-    const emails = value.split(separator).filter(email => !!email.trim());
+const validateEmails = (value, separator = ';') => {
+    const emails = value.split(separator) // premièrement, on crée un tableau
+                        .filter(email => !!email.trim()); // on filtre en enlevant les valeurs vides
     return !!emails.length && emails.every((email) => validateEmail(email.trim()));
 }
 
@@ -76,7 +77,7 @@ senderEmail.addEventListener('input', () => {
 recipientEmails.addEventListener('input', () => { 
     updateAppStateFormValid();
     // public emails valid or not
-    eventManager.emit(TOPICS.setControlValidity, recipientEmails, validateRecipientEmails(recipientEmails.value, ';'));
+    eventManager.emit(TOPICS.setControlValidity, recipientEmails, validateEmails(recipientEmails.value, ';'));
 });
 
 validateBtn.addEventListener('click', () => {
